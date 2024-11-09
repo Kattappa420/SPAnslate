@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPAnslate</title>
+  <link rel="stylesheet" href="pdf.css">
+  <script src="script.js" defer></script>
+  <link rel="icon" href="languages.png" type="image/png">
+</head>
+<body>
+  <div class="header">
+    <div class="hh">SPAnslate</div>
+    <div class="dets">
+      <img src="angtom1.jpeg" alt="User Photo" class="user-photo" />
+      <span class="user-name">Chintu</span>
+    </div>
+    <div class="log-b">
+      <button class="lb" id="logb" onclick="window.open('d.html', '_blank')">
+          Saved
+      </button>
+  </div>
+  
+    <!--<div class="sin-b"><button class="sb" id="sinb">SignIn</button></div> -->
+  </div>
+
+  <div class="container">
+    <div class="left-box" id="leftBox">
+        <button class="close-btn" id="closeBtn" style="display: none;">&times;</button>
+    </div>
+    <div class="right-box">
+      <div class="upper-right">
+        <!-- <div class="buttons">
+          <button id="uploadBtn"><img src="share.png" alt="upload" /></button>
+          <button id="downloadBtn"><img src="download.png" alt="download" /></button>
+        </div> -->
+        <div class="dropdown-container" onclick="toggleDropdown()">
+          <input type="text" id="dropdownSearch" placeholder="Select language..." oninput="filterLanguages()">
+          <div id="dropdownList" class="dropdown-list">
+            <select id="languageDropdown" size="3" onchange="selectLanguage()" onclick="event.stopPropagation()">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="es">Spanish</option>
+              <option value="de">German</option>
+              <option value="it">Italian</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="detect">
+          <ul>
+            <li><button class="action" id="detectLanguageBtn">Detect Language</button></li>
+            <li>Language(s): <span id="languagesDetected">None</span></li>
+            <li><button class="action">Translate</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="small-square" id="addFileBtn">
+        <button class="ss"><img src="plus-sign.png" alt="add" width="40px" /></button>
+      </div>
+      <div class="lower-right-box" id="extraFilesBox"></div>
+    </div>
+  </div>
+</body>
+</html>

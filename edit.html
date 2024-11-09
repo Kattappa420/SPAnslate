@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="icon" href="languages.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        .file-display-box {
+            width: 80%;
+            max-width: 800px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            max-height: 600px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="file-display-box" id="fileDisplay">
+    <!-- File content will be displayed here -->
+    <p>File content will be shown here...</p>
+</div>
+
+<script>
+    // Example of displaying file content dynamically
+    let fileContent = "This is an example of file content displayed in the box.";
+    
+    // Insert content into the display box
+    document.getElementById('fileDisplay').textContent = fileContent;
+
+    // Alternatively, you can fetch or load file content dynamically as needed
+</script>
+
+</body>
+</html>
